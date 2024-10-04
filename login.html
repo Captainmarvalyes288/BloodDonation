@@ -160,7 +160,7 @@
             
             // Redirect based on role
             if (role === 'donor') {
-                window.location.href = 'index.html'; // Redirect to donor home page
+                window.location.href = 'default.html'; // Redirect to donor home page
             } else if (role === 'organization') {
                 window.location.href = 'organization-dashboard.html'; // Redirect to organization dashboard
             }
@@ -172,7 +172,7 @@
     // Simulate Google login
     function loginWithGoogle() {
         alert('Google login successful!');
-        window.location.href = 'index.html'; // Redirect to home page
+        window.location.href = 'default.html'; // Redirect to home page
     }
 
     // Example script to modify the home link based on user role
@@ -184,7 +184,7 @@
 
     if (isLoggedIn) {
         if (userRole === 'donor') {
-            homeLink.href = 'index.html'; // Donor home page
+            homeLink.href = 'default.html'; // Donor home page
         } else if (userRole === 'organization') {
 
             homeLink.href = 'organization-dashboard.html'; // Organization dashboard
