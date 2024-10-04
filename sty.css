@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+.back-arrow {
+    display: inline-block;
+    margin: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #ff6b6b;
+}
+
+/* Profile Container */
+#profile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    position: relative;
+    top: 60px;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    border: 2px solid #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.profile-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-header p {
+    color: #777;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.profile-stats div {
+    text-align: center;
+}
+
+.profile-stats h3 {
+    font-size: 20px;
+    color: #ff6b6b;
+}
+
+.profile-stats p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Donation History */
+.donation-history {
+    margin-bottom: 20px;
+}
+
+.donation-history h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.donation-history textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+}
+
+/* Profile Menu */
+.profile-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-menu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.profile-menu li:hover {
+    background-color: #f9f9f9;
+}
+
+.profile-menu li:last-child {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+/* Navigation Bar */
+.nav-bar {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+    top: 70px;
+  }
+  footer span{
+
+    color: #FF1493;
+ }

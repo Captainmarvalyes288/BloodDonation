@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redflow</title>
+
+    <link rel="shortcut icon " href="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg">
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav-container">
+            <div class="logo">
+              <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+            </div>
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="inbox.html">Inbox</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <div id="profile-container"></div>
+
+    <script>
+        // Function to create the navigation bar (dummy function for demonstration)
+        function createNavBar(currentPage) {
+            return `<div class="nav-bar"> ${currentPage}</div>`;
+        }
+
+        // Function to display the profile
+        function showProfile() {
+            const app = document.getElementById('profile-container');
+            app.innerHTML = `
+                <div class="profile-header">
+                    <img src="https://i.pinimg.com/736x/02/6c/cd/026ccd817a8f17bb11624b0d2b559490.jpg" alt="David John"  width = "200px"  height = "200px">
+                    <h2>David John</h2>
+                    <p>Last Donation: October, 2023</p>
+                </div>
+                <div class="profile-stats">
+                    <div>
+                        <h3>05</h3>
+                        <p>Donations</p>
+                    </div>
+                </div>
+                <div class="donation-history">
+                    <h3>Donation History</h3>
+                    <textarea placeholder="Share your donation experiences here..."></textarea>
+                </div>
+                <ul class="profile-menu">
+                    <li onclick="alert('Edit Profile')">Edit Profile &gt;</li>
+                    
+                    <li onclick="alert('Settings')">Settings &gt;</li>
+                    
+                    <li onclick="alert('Privacy Policy')">Privacy Policy &gt;</li>
+                    
+                    <li onclick="alert('About Us')">About Us &gt;</li>
+                    <li onclick="alert('Signing Out')">Sign Out</li>
+                </ul>
+                ${createNavBar('profile')}
+            `;
+        }
+
+        // Call the showProfile function when the page loads
+        document.addEventListener('DOMContentLoaded', showProfile);
+    </script>
+        <footer>
+            <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+          </footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Events</title>
+    <style>
+                  /* Navigation Bar Styling */
+  header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+   top: 40px;
+  }
+  footer span{
+
+    color: #FF1493;
+ }
+        :root {
+            --primary-color: #FF1493;
+            --secondary-color: #ff69b4;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg-color: #fff;
+            --border-color: #ddd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar h1 {
+            margin: 0;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .search-bar {
+            display: inline-block;
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            padding: 10px;
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            flex: 1;
+        }
+        .search-bar button {
+            background-color: var(--primary-color);
+            color: var(--card-bg-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+        }
+        .search-bar button:hover {
+            background-color: var(--secondary-color);
+        }
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .event-card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+        }
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .event-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .event-card p {
+            color: var(--text-color);
+            margin: 5px 0;
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: auto; 
+            margin-top: 10px;
+        }
+        .event-card button {
+            background-color: var(--primary-color);
+            color: var(--card-bg-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            flex: 1;
+        }
+        .event-card button:hover {
+            background-color: var(--secondary-color);
+        }
+        @media (max-width: 768px) {
+            .event-list {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <header>
+            <nav>
+              <div class="nav-container">
+                <div class="logo">
+                  <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+                </div>
+                <ul class="nav-links">
+                  <li><a href="organization-dashboard.html">Home</a></li>
+                  <li><a href="inbox.html">Inbox</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="login.html">Login</a></li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+    </div>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="keyword" placeholder="Search by keyword...">
+            <button onclick="searchEvents()">Search</button>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="location" placeholder="Search by location...">
+            <button onclick="searchEvents()">Search</button>
+        </div>
+        <div class="event-list">
+            <div class="event-card">
+                <img src="./Sairaj_Dhamal_blood_organization_photos_of_containg_doctors_2aeba9af-52de-44e9-aefb-6e646e6b5253.png"alt="Blood Donation Drive" class="event-image">
+                <h3>Blood Donation Drive</h3>
+                <p><strong>Location:</strong> City Hospital</p>
+                <p><strong>Organized By:</strong> Red Cross Society</p>
+                <div class="button-group">
+                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="getDirection()">Get Directions</button>
+                    <button onclick="callOrganizer()">Call Organizer</button>
+                    <button onclick="openChat()">Chat</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="./Sairaj_Dhamal_blood_organization_photos_of_containg_peoples_and_aac9fece-3176-4ca0-922c-d339759a9080.png" alt="Community Health Check-up" class="event-image">
+                <h3>Community Health Check-up</h3>
+                <p><strong>Location:</strong> Community Center</p>
+                <p><strong>Organized By:</strong> Health Group</p>
+                <div class="button-group">
+                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="getDirection()">Get Directions</button>
+                    <button onclick="callOrganizer()">Call Organizer</button>
+                    <button onclick="openChat()">Chat</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="./hLvz7u5FMlrlByiISLs6--1--x88wf.jpg" alt="Medical Fitness Health Check-up" class="event-image">
+                <h3>Medical Fitness Health Check-up</h3>
+                <p><strong>Location:</strong> Private Hospital</p>
+                <p><strong>Organized By:</strong> Health Group</p>
+                <div class="button-group">
+                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="getDirection()">Get Directions</button>
+                    <button onclick="callOrganizer()">Call Organizer</button>
+                    <button onclick="openChat()">Chat</button>
+                </div>
+            </div>
+            <div class="event-card">
+                <img src="./TablmtjnCb8tGSVl5UOL--1--5c6pk.jpg" alt="Local Community Health Check-up" class="event-image">
+                <h3>Local Community Health Check-up</h3>
+                <p><strong>Location:</strong> Local Community Center</p>
+                <p><strong>Organized By:</strong> Health Group</p>
+                <div class="button-group">
+                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="getDirection()">Get Directions</button>
+                    <button onclick="callOrganizer()">Call Organizer</button>
+                    <button onclick="openChat()">Chat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+        function getDirection() {
+            alert('Opening Google Maps for directions...');
+        }
+        function callOrganizer() {
+            alert('Calling the organizer...');
+        }
+        function openChat() {
+            window.location.href='chat.html';
+        }
+        function searchEvents() {
+            const keyword = document.getElementById('keyword').value;
+            const location = document.getElementById('location').value;
+            alert(`Searching for events with keyword: ${keyword} and location: ${location}`);
+        }
+    </script>
+
+<footer>
+    <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

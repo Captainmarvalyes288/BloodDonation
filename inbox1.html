@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redflow</title>
+
+    <link rel="shortcut icon " href="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+        <nav>
+          <div class="nav-container">
+            <div class="logo">
+              <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+            </div>
+            <ul class="nav-links">
+              <li><a href="organization-dashboard.html">Home</a></li>
+              <li><a href="inbox1.html">Inbox</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <div class="search-container">
+      <input type="text" placeholder="Search" />
+      <button>Search</button>
+    </div>
+    <ul id="inbox-list" class="inbox-list"></ul>
+
+    <script>
+      function showInbox() {
+        const inboxList = document.getElementById("inbox-list");
+
+        inboxList.innerHTML = `
+            <li class="inbox-item" onclick="location.href='chat1.html'">
+                <img src="https://mastimorning.net/wp-content/uploads/2024/04/WhatsApp-DP-90.png" alt="Michel Lucas">
+                <div class="chat-info">
+                    <h3>Michel Lucas</h3>
+                    <p>Lorem ipsum is simply...</p>
+                </div>
+                <span class="timestamp">10:30 AM</span>
+            </li>
+            <li class="inbox-item" onclick="location.href='chat1.html'">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEhTJeZzKzeBjS7TuNVtTeCB7_utQZwIcwkQ&s" alt="Liam Elijah">
+                <div class="chat-info">
+                    <h3>Liam Elijah</h3>
+                    <p>Lorem ipsum is simply...</p>
+                </div>
+                <span class="timestamp">Yesterday</span>
+            </li>
+            <li class="inbox-item" onclick="location.href='chat1.html'">
+                <img src="https://mastimorning.net/wp-content/uploads/2024/04/WhatsApp-DP-89.png" alt="Daniel Henry">
+                <div class="chat-info">
+                    <h3>Daniel Henry</h3>
+                    <p>Lorem ipsum is simply...</p>
+                </div>
+                <span class="timestamp">2:15 PM</span>
+            </li>
+            <li class="inbox-item" onclick="location.href='chat1.html'">
+                <img src="https://i.pinimg.com/564x/59/37/71/5937714ef4b2fa276c660d26052bbb1a.jpg" alt="Benjamin Jack">
+                <div class="chat-info">
+                    <h3>Benjamin Jack</h3>
+                    <p>Lorem ipsum is simply...</p>
+                </div>
+                <span class="timestamp">12:45 PM</span>
+            </li>
+            <li class="inbox-item" onclick="location.href='chat1.html'">
+                <img src="https://c8.alamy.com/comp/2WG4PFP/5999-stylish-attitude-boy-new-whatsapp-dp-instagram-fb-profile-pic-free-2024-cute-boy-premium-high-res-stock-photos-download-on-alamy-2WG4PFP.jpg" alt="Archer Noah">
+                <div class="chat-info">
+                    <h3>Archer Noah</h3>
+                    <p>Lorem ipsum is simply...</p>
+                </div>
+                <span class="timestamp">10:00 AM</span>
+            </li>
+        `;
+      }
+
+      document.addEventListener("DOMContentLoaded", showInbox);
+    </script>
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+          </footer>
+  </body>
+</html>

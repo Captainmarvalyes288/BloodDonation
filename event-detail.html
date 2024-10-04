@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Details</title>
+    <style>
+        /* Navigation Bar Styling */
+  header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+    /* Footer Styling */
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  footer span{
+
+    color: #FF1493;
+ }
+      :root {
+        --primary-color: #ff1493;
+        --secondary-color: #ff69b4;
+        --background-color: #f9f9f9;
+        --text-color: #333;
+        --card-bg-color: #fff;
+        --border-color: #ddd;
+        --chatbot-bg: #ff1493;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--background-color);
+        margin: 0;
+        padding: 0;
+        color: var(--text-color);
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 30px;
+      }
+      h1 {
+        text-align: center;
+        color: var(--primary-color);
+      }
+      .card {
+        background-color: var(--card-bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .event-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .event-details {
+        margin-top: 15px;
+      }
+      .event-details h3 {
+        color: var(--primary-color);
+      }
+      .event-details p {
+        margin: 5px 0;
+        color: var(--text-color);
+      }
+      .event-actions {
+        margin-top: 10px;
+      }
+      .event-actions button {
+        background-color: var(--primary-color);
+        color: var(--card-bg-color);
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      .event-actions button:hover {
+        background-color: var(--secondary-color);
+      }
+      .chatbot {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: var(--chatbot-bg);
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+      .chatbot img {
+        width: 50px;
+        height: 50px;
+      }
+      .add-event-btn {
+        background-color: var(--primary-color);
+        color: var(--card-bg-color);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: block;
+        margin: 20px auto;
+      }
+      .add-event-btn:hover {
+        background-color: var(--secondary-color);
+      }
+      /* Review Form Styling */
+      .review-form {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: var(--card-bg-color);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .review-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+      .review-form button {
+        background-color: var(--primary-color);
+        color: var(--card-bg-color);
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .review-form button:hover {
+        background-color: var(--secondary-color);
+      }
+      /* Reviews Section */
+      .reviews {
+        margin-top: 20px;
+      }
+      .review-item {
+        background-color: var(--background-color);
+        padding: 10px;
+        border-left: 4px solid var(--primary-color);
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">
+            <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+          </div>
+          <ul class="nav-links">
+            <li><a href="organization-dashboard.html">Home</a></li>
+            <li><a href="inbox.html">Inbox</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>Event Details</h1>
+
+      <div class="event">
+        <img
+          class="event-image"
+          src="./Kqn3hYjNQImnpY8TQhLF--1--txfuh.jpg"
+          alt="Event Image"
+        />
+        <div class="event-details">
+          <h3>Blood Donation Drive</h3>
+          <p><strong>Location:</strong> City Hospital</p>
+          <p><strong>Organized By:</strong> Red Cross Society</p>
+          <p><strong>Rating:</strong> 4.8/5 (by visitors)</p>
+          <p>
+            <strong>Description:</strong> A blood donation drive for the
+            community to support local hospitals.
+          </p>
+        </div>
+        <div class="event-actions">
+          <button onclick="getDirection()">Get Directions</button>
+          <button onclick="callOrganizer()">Call Organizer</button>
+          <button onclick="openChat()">Chat</button>
+        </div>
+
+        <!-- Review Form -->
+        <div class="review-form">
+          <h3>Leave a Review</h3>
+          <textarea
+            id="reviewText"
+            placeholder="Write your review..."
+          ></textarea>
+          <button onclick="submitReview()">Submit Review</button>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews" id="reviewsSection">
+          <h3>Reviews:</h3>
+          <div class="review-item">
+            "It was a well-organized event with helpful staff." - John Doe
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getDirection() {
+        alert("Opening Google Maps for directions...");
+      }
+
+      function callOrganizer() {
+        alert("Calling the organizer...");
+      }
+
+      function openChat() {
+        alert("Opening chat window...");
+      }
+
+      function submitReview() {
+        var reviewText = document.getElementById("reviewText").value;
+        if (reviewText.trim() !== "") {
+          var reviewsSection = document.getElementById("reviewsSection");
+          var newReview = document.createElement("div");
+          newReview.className = "review-item";
+          newReview.innerHTML = '"' + reviewText + '" - New User';
+          reviewsSection.appendChild(newReview);
+
+          // Clear the review form
+          document.getElementById("reviewText").value = "";
+        } else {
+          alert("Please write a review before submitting.");
+        }
+      }
+    </script>
+
+<footer>
+  <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+</footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,243 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navigation Bar Styling */
+  header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+
+ 
+  
+  /* Inbox Styling */
+  .search-container {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+  }
+  
+  .search-container input {
+    width: 70%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-container button {
+    padding: 8px 15px;
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .inbox-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 160px;
+    position: relative;
+    top: 50px;
+
+  }
+  
+  .inbox-item {
+    display: flex;
+    /*align-items: ;*/
+    padding: 10px 15px;
+    border-bottom: 1px solid #dddddd;
+    cursor: pointer;
+    height: 50px;
+    background-color:white;
+  }
+  
+  .inbox-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .inbox-item img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
+  
+  .chat-info h3 {
+    font-size: 16px;
+    margin: 0;
+    padding-left: 20px;
+  }
+  
+  .chat-info p {
+    font-size: 14px;
+    margin: 2px 0 0;
+    padding-left: 20px;
+  }
+  
+  .timestamp {
+    font-size: 12px;
+    color: #777;
+    position: relative;
+    left: 1000px;
+  }
+  
+  /* Chat Page Styling */
+  .back-container {
+    text-align: center;
+    padding: 10px;
+    background-color:white ;
+    
+  }
+  
+  .back-arrow {
+    font-size: 18px;
+    background-color:#FF1493;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+  }
+  
+  .chat-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    
+  }
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .messages {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .message {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .sent {
+    background-color: #FF1493;
+    color:white;
+    align-self: flex-end;
+    margin-left: auto;
+  }
+  
+  .received {
+    background-color: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .chat-input input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+  }
+  
+  .chat-input button {
+    width: 20%;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  footer span{
+
+    color: #FF1493;
+ }

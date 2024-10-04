@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Dashboard</title>
+    <style>
+          /* Navigation Bar Styling */
+  header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: relative;
+   top: 40px;
+  }
+  footer span{
+
+    color: #FF1493;
+ }
+
+        :root {
+            --primary-color: #FF1493;
+            --secondary-color: #ff69b4;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg-color: #fff;
+            --border-color: #ddd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            top: 40px;
+            
+        }
+        .dashboard-item {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+            box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+        }
+        .dashboard-item:hover {
+            transform: translateY(-5px);
+        }
+        .dashboard-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+
+        }
+        .dashboard-item button {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: var(--card-bg-color);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .dashboard-item button:hover {
+            background-color: var(--secondary-color);
+        }
+        /* Slider Styles */
+        .slider {
+            position: relative;
+            margin-top: 20px;
+            overflow: hidden;
+            font-weight: 460;
+            text-wrap: balance;
+            box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+            top: 30px;
+        }
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: 200%; 
+        }
+        .slider-item {
+            min-width: 50%; 
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+           
+        }
+        .slider-item img {
+            width: 60%;
+            height: 300px; 
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px; 
+        }
+        .slider-buttons {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px; 
+        }
+        .slider-button {
+            padding: 10px 15px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        .slider-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="nav-container">
+            <div class="logo">
+              <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+            </div>
+            <ul class="nav-links">
+              <li><a href="organization-dashboard.html">Home</a></li>
+              <li><a href="inbox1.html">Inbox</a></li>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <div class="container">
+       
+        
+        <div class="dashboard-grid">
+            <div class="dashboard-item" >
+                <img src="./Billy_Butcher_blood_camp_with_doner_and_doctor_in_carton_form_696727f6-7f18-4dda-aa0d-c96ae463b45e.png"alt="New Events"  style="height:200px ; width: 400px;" >
+                <button onclick="redirectTo('new-events.html')">View New Events</button>
+            </div>
+            <div class="dashboard-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL1FF0tc_D0acaDk7l2NSMOGRhj7-TFimLjw&s" alt="Donor List" >
+                <button onclick="redirectTo('donor-list.html')">View Donor List</button>
+            </div>
+            <div class="dashboard-item">
+                <img src="./Sairaj_Dhamal_blood_event_photo_in_carton_form_5bb3c277-5f74-4e16-a886-4500cce96069.png" alt="Add New Event">
+                <button onclick="redirectTo('add-event.html')">Add New Event</button>
+            </div>
+        </div>
+
+        <!-- Slider for Organization Information -->
+        <div class="slider">
+            <div class="slider-wrapper" id="slider-wrapper">
+                <div class="slider-item">
+                    <img src="./Sairaj_Dhamal_blood_organization_photos_of_india_161e0c16-03a8-4144-855d-d0068124da8b.png" alt="Organization 1">
+                    <h3>Organization 1</h3>
+                    <p>Known for its extensive network of donors, this organization collaborates with hospitals and clinics to ensure a steady supply of blood for transfusions.</p>
+                    <p>This organization focuses on providing blood and health services to communities in need. They organize regular blood donation camps and awareness programs.</p>
+                    <p>This organization specializes in raising awareness about the importance of blood donation and encourages young people to get involved.</p>
+                </div>
+                <div class="slider-item">
+                    <img src="./Sairaj_Dhamal_blood_organization_photos_of_containg_peoples_1f37ac34-75ab-4610-b56d-a617f858d5e4.png" alt="Organization 2">
+                    <h3>Organization 2</h3>
+                    <p>Known for its extensive network of donors, this organization collaborates with hospitals and clinics to ensure a steady supply of blood for transfusions.</p>
+                    <p>This organization focuses on providing blood and health services to communities . They organize regular blood donation camps and awareness programs.</p>
+                    <p>This organization specializes in raising awareness about the importance of blood donation and encourages young people to get involved.</p>                </div>
+                <div class="slider-item">
+                    <img src="./Sairaj_Dhamal_blood_organization_photos_of_containg_doctors_724c4947-9b49-4e61-b95a-f5da9823dfbf.png" alt="Organization 3">
+                    <h3>Organization 3</h3>
+                    <p>Known for its extensive network of donors, this organization collaborates with hospitals and clinics to ensure a steady supply of blood for transfusions.</p>
+                    <p>This organization focuses on providing blood and health services . They organize regular blood donation camps and awareness programs.</p>
+                    <p>This organization specializes in raising awareness about the importance of blood donation and encourages young people to get involved.</p>                </div>
+            </div>
+            <div class="slider-buttons">
+                <button class="slider-button" onclick="moveSlider(-1)">&#10094; Prev</button>
+                <button class="slider-button" onclick="moveSlider(1)">Next &#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlider(direction) {
+            const slides = document.querySelectorAll('.slider-item');
+            const totalSlides = slides.length;
+
+            // Update current slide index
+            currentSlide += direction;
+
+            // Loop around slides
+            if (currentSlide < 0) {
+                currentSlide = Math.ceil(totalSlides / 2) ; // Move to the last set of two
+            } else if (currentSlide > Math.ceil(totalSlides / 2)) {
+                currentSlide = 0; // Move back to the first set of two
+            }
+
+            // Move slider
+            const sliderWrapper = document.getElementById('slider-wrapper');
+            sliderWrapper.style.transform = `translateX(-${currentSlide * 50}%)`; // Adjusted to move two items
+        }
+
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+<footer>
+    <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

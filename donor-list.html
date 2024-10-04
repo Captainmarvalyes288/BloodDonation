@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Dashboard</title>
+    <style>
+          /* Navigation Bar Styling */
+  header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+    /* Footer Styling */
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  footer span{
+
+    color: #FF1493;
+ }
+        :root {
+            --primary-color: #FF1493;
+            --secondary-color: #ff69b4;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg-color: #fff;
+            --border-color: #ddd;
+            --chatbot-bg: #4caf50;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+        .card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+            top: 30px;
+            box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: var(--card-bg-color);
+        }
+        .add-event-btn {
+            background-color: var(--primary-color);
+            color: var(--card-bg-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        .add-event-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+              <div class="nav-container">
+                <div class="logo">
+                  <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+                </div>
+                <ul class="nav-links">
+                    <li><a href="organization-dashboard.html">Home</a></li>
+                  <li><a href="inbox.html">Inbox</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+                  <li><a href="login.html">Login</a></li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+
+        <!-- Donor List Section -->
+        <div class="card donor-list">
+            <h2>Donor List</h2>
+            <table id="donorTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Blood Group</th>
+                        <th>Event Registered</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JohnDoe</td>
+                        <td>O+</td>
+                        <td>Blood Donation Drive</td>
+                        <td>+1234567890</td>
+                    </tr>
+                    <tr>
+                        <td>JaneSmith</td>
+                        <td>A-</td>
+                        <td>Plasma Donation Event</td>
+                        <td>+9876543210</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Add New Donor Form -->
+        <div class="card">
+            <h2>Add New Donor</h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter donor's username">
+            </div>
+            <div class="input-group">
+                <label for="bloodGroup">Blood Group</label>
+                <input type="text" id="bloodGroup" placeholder="Enter blood group">
+            </div>
+            <div class="input-group">
+                <label for="eventRegistered">Event Registered</label>
+                <input type="text" id="eventRegistered" placeholder="Enter event name">
+            </div>
+            <div class="input-group">
+                <label for="contactNumber">Contact Number</label>
+                <input type="text" id="contactNumber" placeholder="Enter contact number">
+            </div>
+            <button class="add-event-btn" onclick="addDonor()">Add Donor</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to add new donor to the table
+        function addDonor() {
+            // Get input values
+            var username = document.getElementById('username').value;
+            var bloodGroup = document.getElementById('bloodGroup').value;
+            var eventRegistered = document.getElementById('eventRegistered').value;
+            var contactNumber = document.getElementById('contactNumber').value;
+
+            // Ensure all fields are filled
+            if (username.trim() === "" || bloodGroup.trim() === "" || eventRegistered.trim() === "" || contactNumber.trim() === "") {
+                alert("Please fill out all fields before submitting.");
+                return;
+            }
+
+            // Get the table and add a new row
+            var table = document.getElementById('donorTable').getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow();
+
+            // Insert cells and set their values
+            newRow.insertCell(0).textContent = username;
+            newRow.insertCell(1).textContent = bloodGroup;
+            newRow.insertCell(2).textContent = eventRegistered;
+            newRow.insertCell(3).textContent = contactNumber;
+
+            // Clear the input fields
+            document.getElementById('username').value = "";
+            document.getElementById('bloodGroup').value = "";
+            document.getElementById('eventRegistered').value = "";
+            document.getElementById('contactNumber').value = "";
+        }
+    </script>
+
+        <footer>
+            <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+          </footer>
+</body>
+</html>
