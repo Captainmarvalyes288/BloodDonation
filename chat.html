@@ -5,11 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat - Blood Donation App</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .back-button {
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #FF1493;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .back-button:hover {
+        background-color: #FF69B4;
+    }
+</style>
   </head>
+
   <body>
-    <div class="back-container">
-      <a href="inbox.html" class="back-arrow">&larr; Back</a>
-    </div>
+    
+      <button class="back-button" onclick="history.back()">Back</button>
+    
     <div id="chat-container" class="chat-container"></div>
 
     <script>

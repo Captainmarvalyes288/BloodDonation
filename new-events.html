@@ -75,7 +75,7 @@
     color: #FF1493;
  }
         :root {
-            --primary-color: #FF1493;
+            --primary-color: #FF2400;
             --secondary-color: #ff69b4;
             --background-color: #f9f9f9;
             --text-color: #333;
@@ -176,7 +176,7 @@
             margin-top: 10px;
         }
         .event-card button {
-            background-color: var(--primary-color);
+          background-color: #FF2400;
             color: var(--card-bg-color);
             border: none;
             padding: 10px 15px;
@@ -209,6 +209,8 @@
                   <li><a href="inbox.html">Inbox</a></li>
                   <li><a href="profile.html">Profile</a></li>
                   <li><a href="login.html">Login</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
+                  <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
               </div>
             </nav>
@@ -230,7 +232,7 @@
                 <p><strong>Location:</strong> City Hospital</p>
                 <p><strong>Organized By:</strong> Red Cross Society</p>
                 <div class="button-group">
-                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="redirectTo('event-details-doner.html')">View Details</button>
                     <button onclick="getDirection()">Get Directions</button>
                     <button onclick="callOrganizer()">Call Organizer</button>
                     <button onclick="openChat()">Chat</button>
@@ -242,7 +244,7 @@
                 <p><strong>Location:</strong> Community Center</p>
                 <p><strong>Organized By:</strong> Health Group</p>
                 <div class="button-group">
-                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="redirectTo('event-details-doner.html')">View Details</button>
                     <button onclick="getDirection()">Get Directions</button>
                     <button onclick="callOrganizer()">Call Organizer</button>
                     <button onclick="openChat()">Chat</button>
@@ -254,7 +256,7 @@
                 <p><strong>Location:</strong> Private Hospital</p>
                 <p><strong>Organized By:</strong> Health Group</p>
                 <div class="button-group">
-                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="redirectTo('event-details-doner.html')">View Details</button>
                     <button onclick="getDirection()">Get Directions</button>
                     <button onclick="callOrganizer()">Call Organizer</button>
                     <button onclick="openChat()">Chat</button>
@@ -266,10 +268,10 @@
                 <p><strong>Location:</strong> Local Community Center</p>
                 <p><strong>Organized By:</strong> Health Group</p>
                 <div class="button-group">
-                    <button onclick="redirectTo('event-detail.html')">View Details</button>
+                    <button onclick="redirectTo('event-details-doner.html')">View Details</button>
                     <button onclick="getDirection()">Get Directions</button>
                     <button onclick="callOrganizer()">Call Organizer</button>
-                    <button onclick="openChat()">Chat</button>
+                    
                 </div>
             </div>
         </div>
@@ -279,13 +281,13 @@
             window.location.href = page;
         }
         function getDirection() {
-            alert('Opening Google Maps for directions...');
+            window.location.href = 'https://www.google.com/maps/place/Pimpri-Chinchwad,+Maharashtra/@18.5802166,73.7450282,12z/data=!4m6!3m5!1s0x3bc2b8377fbdeab3:0x2c4265dab1a7a0f8!8m2!3d18.6297811!4d73.7997094!16zL20vMDU3cjZj?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D';
         }
         function callOrganizer() {
-            alert('Calling the organizer...');
+            window.location.href='call.html';
         }
         function openChat() {
-            window.location.href='chat1.html';
+            window.location.href='chat.html';
         }
         function searchEvents() {
             const keyword = document.getElementById('keyword').value;

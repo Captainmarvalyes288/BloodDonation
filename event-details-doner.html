@@ -74,7 +74,7 @@
     color: #FF1493;
  }
       :root {
-        --primary-color: #FF2400;
+        --primary-color:#FF2400;
         --secondary-color: #ff69b4;
         --background-color: #f9f9f9;
         --text-color: #333;
@@ -127,14 +127,13 @@
         margin-top: 10px;
       }
       .event-actions button {
-        background-color: var(--primary-color);
+        background-color: #FF2400;
         color: var(--card-bg-color);
         border: none;
         border-radius: 4px;
         padding: 10px 20px;
         cursor: pointer;
         margin-right: 10px;
-        background-color: #FF2400;
       }
       .event-actions button:hover {
         background-color: var(--secondary-color);
@@ -188,7 +187,6 @@
         border-radius: 4px;
         padding: 10px 20px;
         cursor: pointer;
-        background-color: #FF2400;
       }
       .review-form button:hover {
         background-color: var(--secondary-color);
@@ -209,7 +207,7 @@
             top: 60px;
             left: 20px;
             z-index: 1000;
-            background-color:#FF2400;
+            background-color: #FF2400;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -225,16 +223,16 @@
   </head>
   <body>
     <header>
-      <button class="back-button" onclick="history.back()">Back</button>
+        <button class="back-button" onclick="history.back()">Back</button>
       <nav>
         <div class="nav-container">
           <div class="logo">
             <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
           </div>
           <ul class="nav-links">
-            <li><a href="organization-dashboard.html">Home</a></li>
-            <li><a href="inbox1.html">Inbox</a></li>
-            <li><a href="profile1.html">Profile</a></li>
+            <li><a href="default.html">Home</a></li>
+            <li><a href="inbox.html">Inbox</a></li>
+            <li><a href="profile.html">Profile</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="about_us.html">About Us</a></li>
             <li><a href="contact_us.html">Contact Us</a></li>
@@ -289,7 +287,7 @@
     </div>
 
     <script>
-      function  Register (){
+            function  Register (){
         window.location.href = 'Register.html';
       }
       function getDirection() {
@@ -301,7 +299,7 @@
       }
 
       function openChat() {
-        window.location.href='chat1.html';
+        window.location.href='chat.html';
       }
 
       function submitReview() {

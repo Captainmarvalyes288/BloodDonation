@@ -3,73 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redflow</title>
+    <title>Redflow - Organizer Profile</title>
+    <link rel="shortcut icon" href="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+    background-color: white; /* Adjust background as needed */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0; /* Align with the left edge */
+    right: 0; /* Align with the right edge */
+    z-index: 1000; /* Ensure it's on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0  8px rgba(0, 0, 0,0.6);
+    position: static;
+    
+  }
+  
+  .logo img {
+    height: 200px; /* Increase this value to make the logo bigger */
+    width: 100px;  /* Maintains aspect ratio */
+  }
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
 
-    <link rel="shortcut icon " href="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg">
-    <link rel="stylesheet" href="sty.css">
+  }
+  
+  .nav-links li {
+    display: inline;
+    
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    
+  }
+  
+  .nav-links a:hover {
+    color: #ff6b6b;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+        #profile-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+            top: 60px;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+          
+        }
+        .profile-header img {
+           
+            margin-bottom: 10px;
+            width: 500px;
+            height: 200px;
+        }
+        .profile-stats {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile-stats div {
+            text-align: center;
+            margin: 0 20px;
+        }
+        .organization-details {
+            margin-bottom: 20px;
+        }
+        .profile-menu {
+            list-style: none;
+            padding: 0;
+        }
+        .profile-menu li {
+            background-color: #f4f4f4;
+            margin-bottom: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .profile-menu li:hover {
+            background-color: #e4e4e4;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            top: 50px;
+            bottom: 0;
+            width: 100%;
+        }
+        footer span {
+            color: #FF2400;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
           <div class="nav-container">
             <div class="logo">
-              <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg"  alt="App Logo"   />
+              <img src="./blood-donation-logo-design-template-2f6a596c76d39423c2bf83c873d062fc_screen.jpg" alt="App Logo" />
             </div>
             <ul class="nav-links">
               <li><a href="organization-dashboard.html">Home</a></li>
               <li><a href="inbox1.html">Inbox</a></li>
               <li><a href="profile1.html">Profile</a></li>
               <li><a href="login.html">Login</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
           </div>
         </nav>
-      </header>
+    </header>
+    
     <div id="profile-container"></div>
-
+    
     <script>
-        // Function to create the navigation bar (dummy function for demonstration)
-        function createNavBar(currentPage) {
-            return `<div class="nav-bar"> ${currentPage}</div>`;
-        }
-
-        // Function to display the profile
         function showProfile() {
             const app = document.getElementById('profile-container');
             app.innerHTML = `
                 <div class="profile-header">
-                    <img src="https://i.pinimg.com/736x/02/6c/cd/026ccd817a8f17bb11624b0d2b559490.jpg" alt="David John"  width = "200px"  height = "200px">
-                    <h2>David John</h2>
-                    <p>Last Donation: October, 2023</p>
+                    <img src="https://www.ewubd.edu/storage/app/uploads/public/642/150/ba1/642150ba19ec9618125528.jpg">
+                    <h2>Red Cross Organization</h2>
+                    <p>Organizing blood donation events since 1881</p>
                 </div>
                 <div class="profile-stats">
                     <div>
-                        <h3>05</h3>
-                        <p>Donations</p>
+                        <h3>1250</h3>
+                        <p>Events Organized</p>
                     </div>
                 </div>
-                <div class="donation-history">
-                    <h3>Donation History</h3>
-                    <textarea placeholder="Share your donation experiences here..."></textarea>
+                <div class="organization-details">
+                    <h3>Organization Details</h3>
+                    <p>The Red Cross Organization is dedicated to preventing and alleviating human suffering in the face of emergencies by mobilizing the power of volunteers and the generosity of donors. We organize regular blood donation drives to ensure a stable supply of blood for medical emergencies.</p>
                 </div>
                 <ul class="profile-menu">
                     <li onclick="alert('Edit Profile')">Edit Profile &gt;</li>
-                    
                     <li onclick="alert('Settings')">Settings &gt;</li>
-                    
                     <li onclick="alert('Privacy Policy')">Privacy Policy &gt;</li>
-                    
                     <li onclick="alert('About Us')">About Us &gt;</li>
                     <li onclick="alert('Signing Out')">Sign Out</li>
                 </ul>
-                ${createNavBar('profile')}
             `;
         }
 
-        // Call the showProfile function when the page loads
         document.addEventListener('DOMContentLoaded', showProfile);
     </script>
-        <footer>
-            <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
-          </footer>
+    
+    <footer>
+        <p>&copy; 2024 Blood Donation <span>Redflow</span>. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>

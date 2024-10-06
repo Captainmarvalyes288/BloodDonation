@@ -68,7 +68,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #FF1493, #FF69B4);
+    background: linear-gradient(90deg, #800020, #FF2400);
     position: relative;
     top: 60px;
     box-shadow: 0 0  8px #FF1493;

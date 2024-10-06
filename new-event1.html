@@ -75,7 +75,7 @@
     color: #FF1493;
  }
         :root {
-            --primary-color: #FF1493;
+            --primary-color: #FF2400;
             --secondary-color: #ff69b4;
             --background-color: #f9f9f9;
             --text-color: #333;
@@ -129,6 +129,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             margin-left: 10px;
+            background-color: #FF2400;
         }
         .search-bar button:hover {
             background-color: var(--secondary-color);
@@ -185,6 +186,7 @@
             font-size: 14px;
             transition: background-color 0.3s ease;
             flex: 1;
+            background-color: #FF2400;
         }
         .event-card button:hover {
             background-color: var(--secondary-color);
@@ -209,6 +211,8 @@
                   <li><a href="inbox1.html">Inbox</a></li>
                   <li><a href="profile1.html">Profile</a></li>
                   <li><a href="login.html">Login</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
+                  <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
               </div>
             </nav>
@@ -279,13 +283,13 @@
             window.location.href = page;
         }
         function getDirection() {
-            alert('Opening Google Maps for directions...');
+            window.location.href = 'https://www.google.com/maps/place/Pimpri-Chinchwad,+Maharashtra/@18.5802166,73.7450282,12z/data=!4m6!3m5!1s0x3bc2b8377fbdeab3:0x2c4265dab1a7a0f8!8m2!3d18.6297811!4d73.7997094!16zL20vMDU3cjZj?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D';
         }
         function callOrganizer() {
-            alert('Calling the organizer...');
+            window.location.href='call.html';
         }
         function openChat() {
-            window.location.href='chat.html';
+            window.location.href='chat1.html';
         }
         function searchEvents() {
             const keyword = document.getElementById('keyword').value;
